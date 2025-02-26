@@ -1,3 +1,3 @@
-My first website on GitHub
+# Welcome!
 
-Made during MyFirstApp course at Greenfox
+## This is the repository of my website.
