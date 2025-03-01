@@ -32,9 +32,9 @@ header ul {
 	justify-content: space-between;
 }
 
-header li {
-	margin: 0;
-    padding: 1em;
+header li a {
+	display: block;
+	padding: 1em;
     border-radius: 3px;
     transition: background-color 0.3s ease;
 }
