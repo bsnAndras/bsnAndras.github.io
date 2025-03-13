@@ -8,7 +8,7 @@ const route = (event: any) => {
 
 const routes: Record<string | number, string> = {
     404: "/pages/404.html",
-    "/": "PLACEHOLDER FROM ROUTES",
+    "/": "/pages/about.html",
     "/about": "/pages/about.html",
     "/contact": "/pages/contact.html",
     "/services": "/pages/services.html"
@@ -23,7 +23,7 @@ const handleLocation = () => {
     fetchPage(route)
     .then(data => page = data)
     .then(() => {
-        getMainTag()
+        fetchTag("main")
         .then(data => data.innerHTML=page);
     })
 
@@ -41,11 +41,12 @@ const fetchPage = async(route:string) => {
     });
 }
 
-const getMainTag = async () => {
+const fetchTag = async (tagname: string) => {
     return new Promise<HTMLElement>((resolve, reject) => {
-        const mainTag: HTMLElement|null= document.querySelector("main");
-        mainTag? resolve(mainTag) : reject("Couldn't find main tag");
+        const tag: HTMLElement|null= document.querySelector(tagname);
+        tag? resolve(tag) : reject("Couldn't find <" + tagname + "> tag!");
     });
 }
 
 window.addEventListener("popstate", handleLocation);
+document.addEventListener("DOMContentLoaded", handleLocation);
