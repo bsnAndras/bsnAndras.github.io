@@ -21,30 +21,30 @@ const handleLocation = () => {
     console.log("route:", route);
     let page: string;
     fetchPage(route)
-    .then(data => page = data)
-    .then(() => {
-        fetchTag("main")
-        .then(data => data.innerHTML=page);
-    })
+        .then(data => page = data)
+        .then(() => {
+            fetchTag("main")
+                .then(data => data.innerHTML = page);
+        })
 
 }
 
-const fetchPage = async(route:string) => {
+const fetchPage = async (route: string) => {
     return new Promise<string>((resolve, reject) => {
         fetch(route)
-        .then(data => data.text())
-        .then(htmlString => resolve(htmlString))
-        .catch((err) => {
-            console.error("fetchPage(): Error fetching page!",err);
-            reject(err);
-        });
+            .then(data => data.text())
+            .then(htmlString => resolve(htmlString))
+            .catch((err) => {
+                console.error("fetchPage(): Error fetching page!", err);
+                reject(err);
+            });
     });
 }
 
 const fetchTag = async (tagname: string) => {
     return new Promise<HTMLElement>((resolve, reject) => {
-        const tag: HTMLElement|null= document.querySelector(tagname);
-        tag? resolve(tag) : reject("Couldn't find <" + tagname + "> tag!");
+        const tag: HTMLElement | null = document.querySelector(tagname);
+        tag ? resolve(tag) : reject("Couldn't find <" + tagname + "> tag!");
     });
 }
 

@@ -14,7 +14,6 @@ body {
 
 header {
 	background-color: var(--secondary-color);
-	color: white;
 }
 
 header nav {
@@ -53,13 +52,13 @@ header a:any-link {
 
 .top-banner {
     padding: 4em 0 1.8em 8em;
+	color: var(--accent-color);
 }
 .top-banner h1 {
     margin: 0 0 1em;
 	font-size: 3rem;
 	font-weight: 400;
 	font-style: italic;
-	color:var(--accent-color)
 }
 
 main {
