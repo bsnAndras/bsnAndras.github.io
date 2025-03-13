@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-	--primary-color: rgb(240, 243, 253);
-	--secondary-color: rgb(221, 222, 241);
-	--accent-color: rgb(43, 45, 99);
+	--primary-color: #f0f3fd;
+	--secondary-color: #dddef1;
+	--accent-color: #2b2d63;
 	font-family: "Outfit", serif;
 }
 
@@ -61,13 +61,17 @@ header a:any-link {
 	font-style: italic;
 }
 
+/* Main content */
 main {
 	margin: auto;
-	padding: 10em;
+	padding: 5em 10em;
 	background-color: white;
 	max-width: 1000px;
 }
 
+
+
+/* Footer*/
 footer {
 	background-color: var(--secondary-color);
     padding: 10px;

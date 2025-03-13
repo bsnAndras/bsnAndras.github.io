@@ -6,27 +6,52 @@ const route = (event: any) => {
     handleLocation();
 }
 
-const routes: Record<string | number, string> = {
-    404: "/pages/404.html",
-    "/": "/pages/about.html",
-    "/about": "/pages/about.html",
-    "/contact": "/pages/contact.html",
-    "/services": "/pages/services.html"
+type Page = {
+    title: string;
+    contentPath: string;
+    tagId: string;
+    content?: string;
+}
+
+const routes: Record<string | number, Page> = {
+    404: {
+        title: "404 - Page Not Found",
+        contentPath: "/pages/404.html",
+        tagId: "404"
+    },
+    "/": {
+        title: "About Me",
+        contentPath: "/pages/about.html",
+        tagId: "about"
+    },
+    "/about": {
+        title: "About Me",
+        contentPath: "/pages/about.html",
+        tagId: "about"
+    },
+    "/projects": {
+        title: "My Projects",
+        contentPath: "/pages/projects.html",
+        tagId: "projects"
+    },
+    "/contact": {
+        title: "Contact Me",
+        contentPath: "/pages/contact.html",
+        tagId: "contact"
+    }
 }
 
 const handleLocation = () => {
     const path: string | null = window.location.pathname;
-    console.log("path:", path);
-    const route = routes[path] || routes[404];
-    console.log("route:", route);
-    let page: string;
-    fetchPage(route)
-        .then(data => page = data)
-        .then(() => {
-            fetchTag("main")
-                .then(data => data.innerHTML = page);
-        })
-
+    const route = (routes[path] || routes[404]);
+    const page: Page = {
+        title: route.title, 
+        contentPath: route.contentPath, 
+        tagId: route.tagId
+    };
+    fetchPage(page.contentPath)
+        .then(data => page.content = data)
+        .then(() => renderPage(page));
 }
 
 const fetchPage = async (route: string) => {
@@ -46,6 +71,15 @@ const fetchTag = async (tagname: string) => {
         const tag: HTMLElement | null = document.querySelector(tagname);
         tag ? resolve(tag) : reject("Couldn't find <" + tagname + "> tag!");
     });
+}
+
+const renderPage = (page: Page) => {
+        fetchTag("main")
+            .then(mainTag => {
+                mainTag.innerHTML = page.content || "404 - Page Not Found";
+                mainTag.id = page.tagId;
+                document.title = page.title;
+            });
 }
 
 window.addEventListener("popstate", handleLocation);
