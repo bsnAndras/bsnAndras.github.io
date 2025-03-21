@@ -3,11 +3,37 @@
 }
 
 :root {
-	--primary-color: #f0f3fd;
-	--secondary-color: #dddef1;
+	--background-color: #e7ebfa;
+	--foreground-color: #141875;
 	--accent-color: #2b2d63;
+	--alt-color: #2b2d63;
+
+	--bar-width: 60px;
+	--bar-height: 8px;
+	--hamburger-gap: 6px;
 }
 
 body {
 	margin: 0;
+}
+
+.hamburger-icon {
+	margin: auto;
+	display: block;
+	width: var(--bar-width);
+	height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-icon::before, 
+.hamburger-icon::after,
+.hamburger-icon input{
+	content: "";
+	appearance: none;
+	margin: var(--hamburger-gap);
+	display: flex;
+	flex-direction: column;
+	width: var(--bar-width);
+	height: var(--bar-height);
+	background-color: var(--foreground-color);
+	border-radius: 999px;
 }
