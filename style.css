@@ -1,4 +1,6 @@
-*,*::before,*::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -17,23 +19,52 @@ body {
 	margin: 0;
 }
 
-.hamburger-icon {
-	margin: auto;
-	display: block;
-	width: var(--bar-width);
-	height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+#navbar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    align-items: center;
 }
 
-.hamburger-icon::before, 
-.hamburger-icon::after,
-.hamburger-icon input{
-	content: "";
-	appearance: none;
-	margin: var(--hamburger-gap);
+.fixed-links {
+	display: none;
+}
+
+/* -------------- */
+/* Hamburger Menu */
+/* -------------- */
+
+/* __Hamburger icon__ */
+.hamburger-icon {
+	margin: var(--hamburger-gap) auto;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	gap: var(--hamburger-gap);
+	align-items: center;
+	cursor: pointer;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after,
+.hamburger-icon input {
+	content: "";
 	width: var(--bar-width);
 	height: var(--bar-height);
 	background-color: var(--foreground-color);
 	border-radius: 999px;
+}
+
+.hamburger-icon input {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	pointer-events: none;
+}
+
+.hamburger-icon input:checked {
+	background-color: red;
 }
