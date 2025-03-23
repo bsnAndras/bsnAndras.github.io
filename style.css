@@ -10,9 +10,12 @@
 	--accent-color: #2b2d63;
 	--alt-color: #2b2d63;
 
+	--animation-timing: 0.2s ease-in-out;
+
 	--bar-width: 60px;
 	--bar-height: 8px;
 	--hamburger-gap: 6px;
+	--hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 body {
@@ -39,22 +42,24 @@ body {
 /* __Hamburger icon__ */
 .hamburger-icon {
 	margin: var(--hamburger-gap) auto;
-	width: 100%;
+	width: var(--bar-width);
 	display: flex;
 	flex-direction: column;
 	gap: var(--hamburger-gap);
-	align-items: center;
 	cursor: pointer;
 }
 
 .hamburger-icon::before,
 .hamburger-icon::after,
 .hamburger-icon input {
+	--diagonal-length: calc(var(--hamburger-height) * 1.414);
 	content: "";
 	width: var(--bar-width);
 	height: var(--bar-height);
 	background-color: var(--foreground-color);
 	border-radius: 999px;
+	transition: var(--animation-timing);
+	transform-origin: left center;
 }
 
 .hamburger-icon input {
@@ -66,5 +71,17 @@ body {
 }
 
 .hamburger-icon input:checked {
-	background-color: red;
+	opacity: 0;
+	width: 0;
+}
+
+.hamburger-icon:has(input:checked)::before {
+	rotate: 45deg;
+	width: var(--diagonal-length);
+	translate: 0 calc(var(--bar-height) / -2);
+}
+.hamburger-icon:has(input:checked)::after {
+	rotate: -45deg;
+	width: var(--diagonal-length);
+	translate: 0 calc(var(--bar-height) / 2);
 }
