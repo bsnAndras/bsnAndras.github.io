@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,7 +10,7 @@
 	--background-color: #e7ebfa;
 	--foreground-color: #141875;
 	--accent-color: #2b2d63;
-	--alt-color: #2b2d63;
+	--alt-color: #d7cfec;
 
 	--animation-timing: 0.2s ease-in-out;
 
@@ -16,28 +18,28 @@
 	--bar-height: 8px;
 	--hamburger-gap: 6px;
 	--hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+	--navbar-height: calc(var(--hamburger-height) + var(--hamburger-gap) * 2);
 }
 
 body {
 	margin: 0;
+	font-family: 'Exo 2', sans-serif;
+	color: var(--foreground-color);
 }
+
+/* -------------- */
+/*     Navbar     */
+/* -------------- */
 
 #navbar {
 	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+	height: var(--navbar-height);
     background-color: var(--background-color);
     align-items: center;
 }
-
-.fixed-links {
-	display: none;
-}
-
-/* -------------- */
-/* Hamburger Menu */
-/* -------------- */
 
 /* __Hamburger icon__ */
 .hamburger-icon {
@@ -84,4 +86,61 @@ body {
 	rotate: -45deg;
 	width: var(--diagonal-length);
 	translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-icon:has(input:focus-visible)::before,
+.hamburger-icon:has(input:focus-visible)::after,
+.hamburger-icon input:focus-visible {
+	border: 2px solid var(--background-color);
+	box-shadow: 0 0 0 3px var(--foreground-color);
+}
+/* __Navbar links - GENERAL__ */
+
+.navlinks-container {
+	margin: 0;
+	padding: 0.5em;
+	display: flex;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+.navlinks-container li,
+.navlinks-container a:any-link {
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+/* __Navbar links - small device__ */
+
+.fixed-links {
+	display: none;
+}
+
+.mobile-links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	background-color: var(--foreground-color);
+	translate: 0 -150%;
+	transition: translate var(--animation-timing);
+}
+
+.mobile-links a:any-link {
+	color: var(--background-color);
+	padding: 0.5em 1em;
+}
+
+.hamburger-icon:has(input:checked) + .mobile-links {
+	translate: 0;
+}
+
+/* __Navbar - big device__ */
+
+
+/* ___ Content ___ */
+main {
+	margin-top: calc(var(--hamburger-height) + var(--hamburger-gap)*2);
+	padding: 1.2em;
 }
