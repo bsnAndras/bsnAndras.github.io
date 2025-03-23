@@ -33,12 +33,12 @@ body {
 
 #navbar {
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: var(--navbar-height);
-    background-color: var(--background-color);
-    align-items: center;
+	background-color: var(--background-color);
+	align-items: center;
 }
 
 /* __Hamburger icon__ */
@@ -82,6 +82,7 @@ body {
 	width: var(--diagonal-length);
 	translate: 0 calc(var(--bar-height) / -2);
 }
+
 .hamburger-icon:has(input:checked)::after {
 	rotate: -45deg;
 	width: var(--diagonal-length);
@@ -94,6 +95,7 @@ body {
 	border: 2px solid var(--background-color);
 	box-shadow: 0 0 0 3px var(--foreground-color);
 }
+
 /* __Navbar links - GENERAL__ */
 
 .navlinks-container {
@@ -109,6 +111,7 @@ body {
 	padding: 0;
 	text-decoration: none;
 	list-style: none;
+	font-weight: 600;
 }
 
 /* __Navbar links - small device__ */
@@ -132,12 +135,30 @@ body {
 	padding: 0.5em 1em;
 }
 
-.hamburger-icon:has(input:checked) + .mobile-links {
+.hamburger-icon:has(input:checked)+.mobile-links {
 	translate: 0;
 }
 
 /* __Navbar - big device__ */
+@media screen and (min-width: 768px) {
 
+	.hamburger-icon,
+	.mobile-links {
+		display: none;
+	}
+
+	.fixed-links {
+		display: flex;
+		justify-content: space-evenly;
+		background-color: var(--background-color);
+	}
+
+	.fixed-links a:any-link {
+		color: var(--foreground-color);
+		padding: 0.5em 1em;
+	}
+
+}
 
 /* ___ Content ___ */
 main {
