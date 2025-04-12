@@ -1,81 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Földesi András</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>F.A. Solutions</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-	<header>
-		<nav id="navbar">
-			<label class="hamburger-icon">
-				<input type="checkbox">
-			</label>
-			<ul class="navlinks-container mobile-links">
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">My Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-			<ul class="navlinks-container fixed-links">
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">My Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section id="about">
-			<h2>About Me</h2>
-			<p>Hi, I'm András, a web developer based in Budapest, Hungary. I create responsive websites that are
-				displayed on all devices. I have a passion for web development and love to create for web. I am always
-				looking for new challenges and opportunities to grow my skills.</p>
-		</section>
-		<section id="projects">
-			<h2>My Projects</h2>
-			<div class="cardholder">
-				<div class="card">
-					<h3>Pet Clinic Project</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at neque mattis pulvinar.
-					</p>
-					<a target="_blank" href="https://github.com/bsnAndras/Pet-Clinic-Application">Read More</a>
-				</div>
-				<div class="card">
-					<h3>Wanderer Project</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at neque mattis pulvinar.
-					</p>
-					<a target="_blank" href="https://github.com/bsnAndras/gfa-wanderer">Read More</a>
-				</div>
-				<div class="card">
-					<h3>To Do application</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at neque mattis pulvinar.
-					</p>
-					<a target="_blank" href="https://github.com/bsnAndras/gfa-todo-app">Read More</a>
-				</div>
-			</div>
-
-		</section>
-		<section id="contact">
-			<h1>Contact</h1>
-			<ul>
-				<li>Email: <a href="mailto:bsnandras+developer@protonmail.com">bsnandras+developer@protonmail.com</a></li>
-				<li>Mobile: <a href="tel:+36 30 842 5434">+36 30 842 5434</a></li>
-				<li>
-					<a href="https://www.linkedin.com/in/bsnandras/"><img src="assets\LinkedIN logo.png"
-							alt="LinkedIN"></a>
-				</li>
-				<li>
-					<a href="https://github.com/bsnandras"><img src="assets/GitHub logo.png" alt="GitHub profile">https://github.com/bsnandras</a>
-				</li>
-			</ul>
-		</section>
-
-	</main>
-	<footer><a href="https://www.linkedin.com/in/bsnandras/"><img src="assets\LinkedIN logo.png" alt="LinkedIN"></a>
-	</footer>
-	<script src="dist/script.js"></script>
-</body>
-
+  <body>
+    <header>
+      <nav id="navbar">
+        <label class="hamburger-icon">
+          <input type="checkbox" />
+        </label>
+        <ul class="navlinks-container mobile-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="navlinks-container fixed-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="top-banner">
+        <!-- <img id="profile-picture" src="assets/profile_round.webp" alt="profile picture">
+			<blockquote>I am a web developer with a passion for creating beautiful and functional websites.
+			</blockquote> -->
+      </div>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <div class="column">
+            <h3>The developer</h3>
+            <p>
+              As a full-stack web developer, I create web applications for
+              everyday problems, whether it is a simple webpage, a webshop, or
+              something more complicated.
+            </p>
+            <p>
+              Since the first impression is always important, I always do my
+              best to make every website easy to use and nice to look at.
+            </p>
+          </div>
+          <div class="column">
+            <h3>The musician</h3>
+            <p>
+              I have been teaching music professionally for 5 years. For me,
+              curiosity and flexibility is the key. I don't restrict myself to
+              any genre, or even instrument. I play on multiple instruments,
+              piano, and for a couple years I have been also making music as an
+              orchestra conductor.
+            </p>
+          </div>
+          <strong class="catchphrase">Dream it, and I make it!</strong>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="cardholder">
+          <div class="card">
+            <h3>Pet Clinic Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+              ipsum at neque mattis pulvinar.
+            </p>
+            <a
+              target="_blank"
+              href="https://github.com/bsnAndras/Pet-Clinic-Application"
+              >Read More</a
+            >
+          </div>
+          <div class="card">
+            <h3>Wanderer Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+              ipsum at neque mattis pulvinar.
+            </p>
+            <a target="_blank" href="https://github.com/bsnAndras/gfa-wanderer"
+              >Read More</a
+            >
+          </div>
+          <div class="card">
+            <h3>To Do application</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+              ipsum at neque mattis pulvinar.
+            </p>
+            <a target="_blank" href="https://github.com/bsnAndras/gfa-todo-app"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:bsnandras+developer@protonmail.com"
+              >bsnandras+developer@protonmail.com</a
+            >
+          </li>
+          <li>Mobile: <a href="tel:+36 30 842 5434">+36 30 842 5434</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/bsnandras/"
+              ><img src="assets\LinkedIN logo.png" alt="LinkedIN"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/bsnandras"
+              ><img
+                src="assets/GitHub logo.png"
+                alt="GitHub profile"
+              />https://github.com/bsnandras</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="dist/script.js"></script>
+  </body>
 </html>
