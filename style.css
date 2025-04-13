@@ -9,8 +9,8 @@
 :root {
 	--background-color: #e7ebfa;
 	--foreground-color: #141875;
-	--accent-color: #0804cc;
-	--alt-color: #a995dd93;
+	--accent-color: #0400ff;
+	--alt-color: #e29837;
 
 	--animation-timing: 0.2s ease-in-out;
 
@@ -25,8 +25,6 @@
 /*     Global elements     */
 /* ----------------------- */
 
-
-
 h2 {
 	font-size: 2.5em;
 	margin: 0.5em 0;
@@ -35,6 +33,20 @@ h2 {
 h3 {
 	font-size: 1.6em;
 	margin: 0.5em 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--accent-color);
+	font-weight: 800;
+}
+
+a:hover,
+a:focus-visible {
+	outline: none;
+	text-decoration: underline;
+	color: var(--alt-color);
+	transition: box-shadow var(--animation-timing), background-color var(--animation-timing);
 }
 
 ul {
@@ -62,7 +74,7 @@ strong {
 
 body {
 	margin: 0;
-	font-family: 'Exo 2', sans-serif;
+	font-family: "Exo 2", sans-serif;
 	background-color: var(--background-color);
 	color: var(--foreground-color);
 }
@@ -150,7 +162,6 @@ body {
 .navlinks-container li,
 .navlinks-container a:any-link {
 	padding: 0;
-	text-decoration: none;
 	list-style: none;
 	font-weight: 600;
 }
@@ -190,7 +201,7 @@ body {
 	}
 
 	.fixed-links {
-		margin:auto;
+		margin: auto;
 		display: flex;
 		height: var(--navbar-height);
 		max-width: 1200px;
@@ -203,6 +214,11 @@ body {
 		padding: 0.5em 1em;
 	}
 
+	.fixed-links a:any-link:hover,
+	.fixed-links a:any-link:focus-visible {
+		color: var(--background-color);
+		background-color: var(--foreground-color);
+	}
 }
 
 /* -------------- */
@@ -220,7 +236,6 @@ main {
 section {
 	margin: 4rem auto;
 	padding: 1em;
-	
 }
 
 .top-banner {
@@ -241,8 +256,9 @@ section {
 	flex-wrap: wrap;
 	gap: 2.2em;
 }
+
 .column {
-	max-width:40ch;
+	max-width: 40ch;
 	flex: 1 0 20ch;
 }
 
@@ -256,4 +272,44 @@ section {
 	text-wrap: wrap;
 	line-height: 1.2em;
 	font-size: 1.2em;
+}
+
+/* __Projects__ */
+.cardholder {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
+	gap: 2em;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 1em;
+	background-color: var(--background-color);
+	box-shadow: 0 0 15px var(--accent-color);
+	border-radius: 10px;
+}
+
+.card > p {
+	text-align: justify;
+	text-wrap: wrap;
+}
+
+.card > a {
+	width: 100%;
+	max-width: 26ch;
+	align-self: center;
+	margin-top: auto;
+	text-align: center;
+	padding: 0.5em 1em;
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+	font-weight: 600;
+	border-radius: 10px;
+}
+.card > a:hover,
+.card > a:focus-visible {
+	background-color: var(--alt-color);
+	box-shadow: 0 0 20px #e29837;
 }
