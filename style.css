@@ -314,3 +314,64 @@ section {
   background-color: var(--alt-color);
   box-shadow: 0 0 20px #e29837;
 }
+
+/* __Contact__ */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 26;
+  margin-bottom: 0.5em;
+}
+
+#contact img {
+  height: 2em;
+}
+
+.contact-container {
+  margin-top: 3em;
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.contact-item {
+  height: 5em;
+  padding: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.contact-item > a:has(img) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.contact-item:has(a:focus-visible),
+.contact-item:has(a:hover) {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px var(--alt-color);
+}
+
+/* Contact - medium-big devices */
+@media screen and (min-width: 440px) {
+  .contact-item {
+    height: 5em;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+  }
+}
