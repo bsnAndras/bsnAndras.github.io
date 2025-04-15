@@ -1,6 +1,7 @@
 # My works
 
-Welcome to my homepage!
+## Welcome to my homepage repository!
+- [Take a look at it here!](https://bsnAndras.github.io)
 
 I'm currently in the middle of an exciting career transition to become a full-stack web developer. This site marks my first major step toward gaining hands-on experience in a dynamic and promising field—and ultimately, building a more fulfilling career.
 
@@ -9,7 +10,7 @@ Here, you'll find a collection of my projects, primarily from the Greenfox/Codec
 ## Where the journey began:
 
 My first webpage made at the beginning of the full-stack web developer course at Greenfox - Codecool:
-- [My First website](http://bsnAndras.github.io "Awesome Landing Page") on github: [bsnAndras.github.io]
+- [My First website](https://github.com/bsnAndras/bsnAndras.github.io/tree/old-AwesomeLandingPage?tab=readme-ov-file "Awesome Landing Page") on github
 
 ## Project works made during the course
 - [To Do application (week 11)]
