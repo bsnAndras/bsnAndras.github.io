@@ -12,12 +12,14 @@
   --accent-color: #0400ff;
   --alt-color: #e29837;
 
-  --animation-timing: 0.2s ease-in-out;
+  --animation-timing-slow: 0.4s ease-in-out;
+  --animation-timing-fast: 0.2s ease-in-out;
 
   --bar-width: 60px;
   --bar-height: 8px;
   --hamburger-gap: 6px;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --diagonal-length: calc(var(--hamburger-height) * 1.414);
   --navbar-height: calc(var(--hamburger-height) + var(--hamburger-gap) * 2);
 }
 
@@ -46,9 +48,7 @@ a:focus-visible {
   outline: none;
   text-decoration: underline;
   color: var(--alt-color);
-  transition:
-    box-shadow var(--animation-timing),
-    background-color var(--animation-timing);
+  transition: var(--animation-timing-fast);
 }
 
 ul {
@@ -92,18 +92,18 @@ body {
   flex-direction: column;
   gap: var(--hamburger-gap);
   cursor: pointer;
+  transition: var(--animation-timing-slow);
 }
 
 .hamburger-icon::before,
 .hamburger-icon::after,
 .hamburger-icon input {
-  --diagonal-length: calc(var(--hamburger-height) * 1.414);
   content: "";
   width: var(--bar-width);
   height: var(--bar-height);
   background-color: var(--foreground-color);
   border-radius: 999px;
-  transition: var(--animation-timing);
+  transition: var(--animation-timing-slow);
   transform-origin: left center;
 }
 
@@ -118,6 +118,11 @@ body {
 .hamburger-icon input:checked {
   opacity: 0;
   width: 0;
+}
+
+.hamburger-icon:has(input:checked) {
+  width: var(--hamburger-height);
+  transition: width var(--animation-timing-slow);
 }
 
 .hamburger-icon:has(input:checked)::before {
@@ -170,7 +175,7 @@ body {
   background-color: var(--foreground-color);
   box-shadow: inset 0 0 40px var(--background-color);
   translate: 0 -150%;
-  transition: translate var(--animation-timing);
+  transition: translate var(--animation-timing-slow);
 }
 
 .mobile-links a:any-link {
