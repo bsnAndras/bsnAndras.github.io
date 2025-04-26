@@ -3,3 +3,5 @@ dist/script.js
 node_modules/*
 
 .prettier*
+
+assets/editorial/*
