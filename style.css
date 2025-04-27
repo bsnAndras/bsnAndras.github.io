@@ -495,7 +495,7 @@ section#contact::after {
 /* ---------------------------- */
 /* Content - medium-big devices */
 /* ---------------------------- */
-
+@media screen and (min-width: 440px) {
   section#contact::after {
     content: "";
     display: block;
