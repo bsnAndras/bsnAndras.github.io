@@ -77,7 +77,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Exo 2", sans-serif;
-  background-color: var(--background-color);
+  background-color: white;
   color: var(--foreground-color);
 }
 
@@ -91,6 +91,14 @@ blockquote {
   color: var(--accent-color);
 }
 
+/* --------------*/
+/*     Header    */
+/* ------------- */
+
+header {
+  background-color: var(--background-color_2);
+}
+
 /* -------------- */
 /*     Navbar     */
 /* -------------- */
@@ -101,9 +109,7 @@ blockquote {
   left: 0;
   width: 100%;
   height: var(--navbar-height);
-  /* background-color: var(--background-color); */
-  background-color: #99b8c2cc;
-  /* box-shadow: 0 0 20px var(--accent-color); */
+  background-color: var(--background-color);
   align-items: center;
 }
 
@@ -238,6 +244,100 @@ blockquote {
   }
 }
 
+/* --------------- */
+/* __Hero Banner__ */
+/* --------------- */
+
+.hero-banner {
+  margin: 0 auto;
+  padding: 0 2em 2em;
+  padding-top: calc(var(--navbar-height));
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  column-gap: 2em;
+  align-items: center;
+}
+
+.hero-banner>h1 {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.hero-banner>img {
+  margin: auto;
+  width: 75vw;
+  max-width: 310px;
+  flex: 0 1;
+  border: 4px solid var(--banner-color_4);
+  border-radius: 100%;
+}
+
+blockquote {
+  flex: 1 0 50%;
+  max-width: 40ch;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-radius: 5px;
+}
+
+/* __Hero Banner - mid-wide screen__ */
+@media screen and (min-width: 500px) {
+
+  .hero-banner>h1 {
+    margin: 0.3em 0;
+  }
+
+  .hero-banner>img {
+    margin-left: auto;
+    width: 30vw;
+    flex: 0 1 30%;
+    max-width: 215px;
+    margin-bottom: 2em;
+  }
+
+  .hero-banner>blockquote {
+    margin: 1.4em 0;
+    align-self: flex-start;
+  }
+}
+
+/* __Hero Banner - mid screen__ */
+
+@media screen and (min-width: 500px) and (min-height:500px) {
+  .hero-banner {
+    height: 40vh;
+    min-height: 300px;
+    max-height: 500px;
+    margin-bottom: 3em;
+  }
+}
+
+/* __Hero Banner - big screen__ */
+@media screen and (min-width: 768px) and (min-height: 850px) {
+
+  .hero-banner>h1 {
+    font-size: 4em;
+  }
+
+  .hero-banner > img {
+    max-width: 300px;
+  }
+
+  .hero-banner>blockquote {
+    font-size: 2.2em;
+    max-width: 25ch;
+    align-self: center;
+  }
+}
+
 /* -------------- */
 /*     Content    */
 /* -------------- */
@@ -251,7 +351,7 @@ main {
   scroll-snap-type: y mandatory;
 }
 
-main section {
+main > section {
   scroll-snap-align: start;
   /* margin-bottom: 2rem; */
   padding: 2em;
@@ -264,41 +364,6 @@ section::after {
   width: 85%;
   height: 2px;
   background-color: var(--accent-color);
-}
-
-.top-banner {
-  padding-top: calc(var(--navbar-height));
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--background-color_2);
-}
-
-.top-banner > img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border: 4px solid var(--banner-color_4);
-  border-radius: 100%;
-}
-
-blockquote.catchphrase {
-  display: flex;
-  width: 100%;
-  max-width: 40ch;
-  padding: 1em;
-  text-align: center;
-  font-style: italic;
-  font-weight: 700;
-  color: var(--accent-color);
-  border-radius: 5px;
-}
-
-.catchphrase > strong {
-  align-content: center;
 }
 
 /* __About Me__ */
@@ -330,23 +395,8 @@ blockquote.catchphrase {
 }
 
 /* section#about::after, */
-section.top-banner::after {
+section.hero-banner::after {
   display: none;
-}
-
-.catchphrase {
-  display: block;
-  width: 100%;
-  height: 10em;
-  padding: 1em;
-  font-size: 2.8em;
-  text-align: center;
-  font-style: italic;
-  font-weight: 700;
-  color: var(--accent-color);
-  background-color: var(--background-color_2);
-  /* transition-delay: 2s;
-  transition:box-shadow ease-in 1s; */
 }
 
 /* __Projects__ */
@@ -445,13 +495,6 @@ section#contact::after {
 /* ---------------------------- */
 /* Content - medium-big devices */
 /* ---------------------------- */
-
-@media screen and (min-width: 440px) {
-  .catchphrase {
-    font-size: 2em;
-    background-color: #e7ebfa;
-    box-shadow: inset 0 0 40px 10px #8d90ff;
-  }
 
   section#contact::after {
     content: "";
