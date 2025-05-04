@@ -275,7 +275,7 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.01);
 }
 
 .project-image {
@@ -291,13 +291,16 @@ section {
     height: 110%;
     object-fit: cover;
     transition: transform 0.5s;
+    opacity: 0.5;
 }
 
 .project-card:hover .project-image img {
+    opacity: 1;
     transform: scale(1.1);
 }
 
 .project-content {
+    height: min-content;
     padding: 20px;
 }
 

@@ -25,7 +25,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bsnandras.github.io" />
 
-    <link rel="stylesheet" href="gen-style.css">
+    <link rel="stylesheet" href="styles.css">
     
     <title>András Földesi | Full-Stack Developer</title>
   </head>
@@ -215,7 +215,6 @@
                 <a
                   href="https://github.com/bsnAndras/Pet-Clinic-Application"
                   target="_blank"
-                  style="color: var(--secondary-color)"
                   >View Project Repository</a
                 >
               </p>
@@ -297,7 +296,7 @@
               />
             </div>
             <div class="project-content">
-              <h3 class="project-title">Admin System Chrome Extension</h3>
+              <h3 class="project-title">Kréta Auto-grader Chrome Extension</h3>
               <p>
                 A Chrome Extension developed to enhance the functionality of the
                 music school's online administration system. Improved workflow
@@ -374,9 +373,16 @@
             Developer. Whether you have a question or just want to say hi, I'll
             try my best to get back to you!
           </p>
-          <a href="mailto:bsnandras+dev@protonmail.com" >
-            >bsnandras+dev@protonmail.com</a
-          >
+          <ul style="list-style: none">
+            <li>
+              <a href="mailto:bsnandras+dev@protonmail.com" target="_blank" >
+                email: bsnandras+dev@protonmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+36308425434" target="_blank">tel: +36 30 842 5434</a>
+            </li>
+          </ul>
           <div class="contact-links">
             <a
               href="https://github.com/bsnandras"
@@ -434,33 +440,6 @@
       </div>
     </footer>
 
-    <script>
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-
-      // Simple animation for section elements when they come into view
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      });
-
-      document.querySelectorAll("section").forEach((section) => {
-        section.style.opacity = 0;
-        section.style.transform = "translateY(20px)";
-        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(section);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
