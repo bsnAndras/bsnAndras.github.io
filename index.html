@@ -3,151 +3,464 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Földesi András</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call,mail"
+    <meta
+      name="description"
+      content="András Földesi - Full-Stack Developer specializing in React, TypeScript, Java SpringBoot, and more. View my projects and technical skills."
     />
+    <meta
+      name="keywords"
+      content="full-stack developer, backend developer, React, TypeScript, JavaScript, Java, SpringBoot, Docker, András Földesi, web development"
+    />
+    <meta name="author" content="András Földesi" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="András Földesi - Full-Stack Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Experienced in React, TypeScript, Java, SpringBoot, and more. View my projects and technical skills."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bsnandras.github.io" />
+
+    <link rel="stylesheet" href="gen-style.css">
+    
+    <title>András Földesi | Full-Stack Developer</title>
   </head>
 
   <body>
     <header>
-      <nav id="navbar">
-        <label class="hamburger-icon">
-          <input type="checkbox" />
-        </label>
-        <ul class="navlinks-container mobile-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">My Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="navlinks-container fixed-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">My Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <section class="hero-banner">
-        <h1>Welcome!</h1>
-        <img id="profile-picture" src="assets/profile_round_480px.webp" alt="profile picture" />
-        <blockquote class="hero-quote">
-          Every day is a new opportunity to learn something new.
-        </blockquote>
-      </section>
+      <div class="container">
+        <nav>
+          <div class="logo">AF</div>
+          <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-          <div class="column">
-            <h3>The developer</h3>
-            <p>
-              As a full-stack web developer, I create web applications for
-              everyday problems, whether it is a simple webpage, a webshop, or
-              something more complicated.
-            </p>
-            <p>
-              Since the first impression is always important, I always do my
-              best to make every website easy to use and nice to look at.
-            </p>
-          </div>
-          <div class="column">
-            <h3>The musician</h3>
-            <p>I have been teaching music professionally for 5 years.</p>
-            <p>
-              For me, curiosity and flexibility is the key. I don't restrict
-              myself to any genre, or even instrument. I play on multiple
-              instruments, piano, and for a couple years I have been also making
-              music as an orchestra conductor.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section id="projects">
-        <h2>My Projects</h2>
-        <div class="cardholder">
-          <div class="card">
-            <h3>Pet Clinic Project</h3>
-            <p>A web application for an imaginary pet clinic.</p>
-            <p>
-              The project has been built as part of a full-stack web development
-              course at Green Fox Academy/Codecool cooperation. The participants
-              simulated a real-life work environment, where they had to work in
-              teams, and use the tools that are used in the industry.
-            </p>
-            <a
-              target="_blank"
-              href="https://github.com/bsnAndras/Pet-Clinic-Application"
-              >Link to repository</a
-            >
-          </div>
-          <div class="card">
-            <h3>Wanderer Project</h3>
-            <p>
-              My first 2D RPG game in Java. Find your way in a maze, and defeat
-              monsters!
-            </p>
-            <p>
-              A hero based walking on tiles and killing monsters type of game.
-              The hero is controlled in a maze using the keyboard. Heroes and
-              monsters have levels and stats depending on their levels. The goal
-              is reach the highest level by killing the monsters holding the
-              keys to the next level.
-            </p>
-            <a target="_blank" href="https://github.com/bsnAndras/gfa-wanderer"
-              >Link to repository</a
-            >
-          </div>
-          <div class="card">
-            <h3>To Do application</h3>
-            <p>
-              A command line ToDo application for managing simple tasks, written
-              in Java
-            </p>
-            <p>
-              The application stores todos in a text file, and the user can
-              manage these tasks using command line arguments.
-            </p>
-            <a target="_blank" href="https://github.com/bsnAndras/gfa-todo-app"
-              >Link to repository</a
-            >
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Hello, my name is</h1>
+          <h2>András Földesi</h2>
+          <h3
+            style="
+              font-size: 2rem;
+              color: var(--light-text);
+              margin-bottom: 20px;
+            "
+          >
+            Full-Stack Developer
+          </h3>
+          <p>
+            I build responsive, user-friendly web applications with modern
+            technologies. Currently seeking a Full-stack Developer position
+            where I can apply my technical skills and continue learning new
+            technologies.
+          </p>
+          <div>
+            <a href="#projects" class="cta-button">View My Work</a>
+            <a href="#contact" class="cta-button">Get In Touch</a>
           </div>
         </div>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <ul class="contact-container">
-          <li class="contact-item">
-            <span class="material-symbols-outlined"> mail </span>
-            <a href="mailto:bsnandras+dev@protonmail.com">
-              bsnandras+dev@protonmail.com
-            </a>
-          </li>
-          <li class="contact-item">
-            <span class="material-symbols-outlined"> call </span>
-            <a href="tel:+36 30 842 5434">+36 30 842 5434</a>
-          </li>
-          <li class="contact-item">
-            <a href="https://www.linkedin.com/in/bsnandras/">
-              <img src="assets\LinkedIN logo.png" alt="LinkedIN" />
-            </a>
-          </li>
-          <li class="contact-item">
-            <a href="https://github.com/bsnandras">
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="/assets/profile_round_480px.webp"
+              alt="András Földesi - Full-Stack Developer"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Who am I?</h3>
+            <p>
+              I'm a full-stack developer with a background in music education,
+              bringing a unique perspective to software development. My journey
+              from teaching to tech demonstrates my adaptability and passion for
+              continuous learning.
+            </p>
+            <p>
+              With experience in both front-end and back-end technologies, I
+              enjoy building scalable applications that solve real-world
+              problems. I'm continously expanding my skillset to include on demand
+              technologies like AI technologies, Docker, and cloud services.
+            </p>
+            <p>
+              As a former orchestra conductor and music teacher, I've developed
+              strong leadership, communication, and problem-solving skills that
+              translate well to team-based development environments.
+            </p>
+            <br />
+            <h3>Languages</h3>
+            <ul class="skills-list">
+              <li>
+                English — B2 (Intermediate), professional working proficiency
+              </li>
+              <li>German — Basic conversational proficiency</li>
+              <li>Hungarian — Native</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background-color: rgba(0, 0, 0, 0.1)">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul class="skills-list">
+              <li>React + Vite</li>
+              <li>JavaScript/TypeScript</li>
+              <li>HTML5 & CSS3</li>
+              <li>Material UI</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul class="skills-list">
+              <li>Java SpringBoot</li>
+              <li>Gradle</li>
+              <li>REST API</li>
+              <li>JPA, Hybernate</li>
+              <li>Thymeleaf</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Database</h3>
+            <ul class="skills-list">
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Learning: NoSQL, cloud solutions</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>DevOps & Tools</h3>
+            <ul class="skills-list">
+              <li>Docker</li>
+              <li>Git & GitHub</li>
+              <li>GitHub Actions (CI)</li>
+              <li>Agile/Scrum</li>
+              <li>Jira</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Testing</h3>
+            <ul class="skills-list">
+              <li>Vitest</li>
+              <li>JUnit</li>
+              <li>Integration Testing</li>
+              <li>Test Driven Development</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Other</h3>
+            <ul class="skills-list">
+              <li>AI-Assisted Development</li>
+              <li>Chrome Extension Development</li>
+              <li>Responsive Web Design</li>
+              <li>Accessibility Standards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2025 - Present</div>
+              <h3 class="timeline-title">
+                Career Change - Various Home Projects
+              </h3>
+              <p>
+                Currently expanding my knowledge to transition into a full-stack
+                development role. Developing smaller projects to practice and
+                apply newly learned technologies, including Chrome extension
+                development and other in-demand skills.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2024</div>
+              <h3 class="timeline-title">
+                Full-stack Developer Student - Green Fox Academy/Codecool
+              </h3>
+              <p>
+                As part of the course, our group modelled a real-life working
+                environment. We built a web application in a team, covering
+                frontend and backend using SCRUM methodology.
+              </p>
+              <p>
+                <a
+                  href="https://github.com/bsnAndras/Pet-Clinic-Application"
+                  target="_blank"
+                  style="color: var(--secondary-color)"
+                  >View Project Repository</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2023 - 2024</div>
+              <h3 class="timeline-title">
+                Orchestra Conductor
+              </h3>
+              <p>
+                Led two woodwind ensembles, teaching students aged 7 to 20.
+                Handled the online administration system and developed a custom
+                Chrome extension to enhance its functionality. Organized
+                multiple concerts per semester, collaborating with colleagues,
+                parents, and students.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2019 - 2023</div>
+              <h3 class="timeline-title">
+                Music Teacher - Bassoon and Recorder
+              </h3>
+              <p>
+                Taught bassoon and recorder to students aged 7 to 20. Managed
+                student records and data using Microsoft Excel and LibreOffice
+                Calc. Adapted to the new circumstances by acquiring online
+                presentation and video editing skills under COVID-19. Organized
+                semester concerts for students.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="background-color: rgba(0, 0, 0, 0.1)">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
               <img
-                id="github-logo"
-                src="assets/GitHub logo.png"
-                alt="GitHub profile"
+                src="/assets/project-thumbnails/pet-logo.png"
+                alt="Pet Clinic Application"
               />
-              <span> https://github.com/bsnandras </span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Pet Clinic Application</h3>
+              <p>
+                A full-stack web application built during my coding bootcamp.
+                Features user authentication, role handling, pet
+                records management, and more.
+              </p>
+              <div class="project-tech">
+                <span>React.js + Vite</span>
+                <span>SpringBoot</span>
+                <span>MySQL</span>
+                <span>Docker</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/bsnAndras/Pet-Clinic-Application"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="/assets/project-thumbnails/kreta-logopng.png"
+                alt="Admin System Chrome Extension"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Admin System Chrome Extension</h3>
+              <p>
+                A Chrome Extension developed to enhance the functionality of the
+                music school's online administration system. Improved workflow
+                efficiency and user experience.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Chrome API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bsnAndras/kreta-autograder" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2024</div>
+              <h3 class="timeline-title">Green Fox Academy / Codecool</h3>
+              <p>Badius OPTC - Junior Full-stack web developer</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2019</div>
+              <h3 class="timeline-title">
+                University of Debrecen - Faculty of Music
+              </h3>
+              <p>Bassoon teacher (MA)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">N/A</div>
+              <h3 class="timeline-title">
+                Óbuda University - Kandó Kálmán Faculty of Electrical
+                Engineering
+              </h3>
+              <p>Electrical Engineering (BSc)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">Additional Certifications</div>
+              <h3 class="timeline-title">Other Certifications</h3>
+              <ul class="skills-list">
+                <li>Improvement of digital competences for teachers (2024)</li>
+                <li>ECDL (2011)</li>
+                <li>Driving License - Category B</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: rgba(0, 0, 0, 0.1)">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <p>
+            I'm currently looking for new opportunities as a Full-stack
+            Developer. Whether you have a question or just want to say hi, I'll
+            try my best to get back to you!
+          </p>
+          <a href="mailto:bsnandras+dev@protonmail.com" >
+            >bsnandras+dev@protonmail.com</a
+          >
+          <div class="contact-links">
+            <a
+              href="https://github.com/bsnandras"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
             </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <script src="dist/script.js"></script>
+            <a
+              href="https://linkedin.com/in/bsnandras"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 András Földesi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Simple animation for section elements when they come into view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      });
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = 0;
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+    </script>
   </body>
 </html>
