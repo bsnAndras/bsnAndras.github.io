@@ -333,13 +333,13 @@ section {
 
 @media (any-hover: hover) {
     .project-image > img {
-    opacity: 0.5;
-}
+        opacity: 0.5;
+    }
 
-.project-card:hover .project-image img {
-    opacity: 1;
-    transform: scale(1.1);
-}
+    .project-card:hover .project-image img {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 
@@ -437,7 +437,7 @@ footer p {
     }
 
     .about-content .about-image {
-        max-width: 430px;
+        max-width: 400px;
     }
     
     .timeline::after {
@@ -530,6 +530,7 @@ footer p {
 
     .hero-buttons {
         flex-direction: column;
+        justify-items: center;
         align-items: center;
     }
 }
