@@ -329,6 +329,10 @@ section {
     height: 110%;
     object-fit: cover;
     transition: transform 0.5s;
+}
+
+@media (any-hover: hover) {
+    .project-image > img {
     opacity: 0.5;
 }
 
@@ -336,6 +340,8 @@ section {
     opacity: 1;
     transform: scale(1.1);
 }
+}
+
 
 .project-content {
     height: min-content;
@@ -425,12 +431,6 @@ footer p {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {    
-    .project-image img {
-        opacity: 1;
-    }
-}
-
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
