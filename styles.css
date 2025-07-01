@@ -113,11 +113,11 @@ a.logo:hover {
     border: 1px solid var(--secondary-color);
     font-size: 1.5rem;
     transition: top 0.3s ease-out,
-                opacity 0.8s ease-in-out;
+        opacity 0.8s ease-in-out;
 }
 
 /* Hamburger behaviour */
-.hamburger:has(.bar:checked) + .nav-menu.mobile {
+.hamburger:has(.bar:checked)+.nav-menu.mobile {
     display: block;
     top: var(--nav-height);
     opacity: 1;
@@ -356,7 +356,7 @@ section {
     position: relative;
 }
 
-.project-image > img {
+.project-image>img {
     position: absolute;
     left: 50%;
     translate: -50%;
@@ -366,7 +366,7 @@ section {
 }
 
 @media (any-hover: hover) {
-    .project-image > img {
+    .project-image>img {
         opacity: 0.5;
     }
 
@@ -506,6 +506,7 @@ footer p {
         border-radius: 2px;
         border: none;
         padding: 2px;
+        
     }
 
     .hamburger .bar {
@@ -524,9 +525,10 @@ footer p {
         outline: none;
     }
 
-    .hamburger:focus-visible .bar {
-        outline: 1.5px solid var(--secondary-color);
-        border: 1.2px solid var(--primary-color);
+    .hamburger:focus-visible {
+        outline: 3px solid var(--outline-color);
+        color: var(--outline-color);
+        border: none;
     }
 
     .hero h1 {
