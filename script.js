@@ -8,6 +8,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// Toggle mobile navigation menu
+const hamburgerCheckbox = document.querySelector(".hamburger input[type='checkbox']");
+hamburgerCheckbox?.addEventListener("change", (e) => {
+  console.log("hamburger clicked! target: ", e.target);
+  if (hamburgerCheckbox.checked)
+    handleClickout(hamburgerCheckbox);
+});
+
+function handleClickout(checkbox) {
+  document.addEventListener("click", (e) => {
+    const inside = document.querySelector("header");
+    const isClickInside = inside.contains(e.target);
+    
+    if (!isClickInside) {
+      checkbox.checked = false; // Uncheck the hamburger menu
+      document.removeEventListener("click", handleClickout); // Remove the event listener
+    }
+
+  })
+}
+
 // Simple animation for section elements when they come into view
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
