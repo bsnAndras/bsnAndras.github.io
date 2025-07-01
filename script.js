@@ -11,17 +11,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Toggle mobile navigation menu
 const hamburgerCheckbox = document.querySelector(".hamburger input[type='checkbox']");
 hamburgerCheckbox?.addEventListener("change", (e) => {
-  console.log("hamburger clicked! target: ", e.target);
   if (hamburgerCheckbox.checked)
     handleClickout(hamburgerCheckbox);
 });
 
 function handleClickout(checkbox) {
   document.addEventListener("click", (e) => {
-    const inside = document.querySelector("header");
-    const isClickInside = inside.contains(e.target);
+    const unresponsiveArea = document.querySelector("header");
+    const isLink = e.target.tagName === "A";
+    const shouldClose = !unresponsiveArea.contains(e.target) || isLink;
     
-    if (!isClickInside) {
+    if (shouldClose) {
       checkbox.checked = false; // Uncheck the hamburger menu
       document.removeEventListener("click", handleClickout); // Remove the event listener
     }
