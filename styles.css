@@ -387,7 +387,7 @@ section {
 
 @media (any-hover: hover) {
     .project-image>img {
-        opacity: 0.5;
+        opacity: 0.8;
     }
 
     .project-card:hover .project-image img {
